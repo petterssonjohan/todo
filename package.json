@@ -20,7 +20,8 @@
     "core-js": "^3.8.1",
     "todomvc-app-css": "^2.3.0",
     "uuid": "^8.3.2",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "cxlt-vue2-toastr": "^1.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.9",

@@ -10,6 +10,7 @@
   </div>
 </template>
 <script>
+import 'cxlt-vue2-toastr/dist/css/cxlt-vue2-toastr.css';
 import Header from '../header/header.vue';
 /* Lägg till import för en ny .vue fil som kan få heta list.vue och ligga i folder List i components folder. */
 import List from '../list/list.vue';
@@ -21,6 +22,15 @@ export default {
   components: {
     Header,
     List
+  },
+  watch: {
+    todos(newValue) {
+      if (newValue.length < 5) return;
+      this.$toast.success({
+        title: 'Behöver du hjälp?',
+        message: 'Du verkar ha mycket att göra. Behöver du hjälp?'
+      });
+    }
   },
   methods: {
     addTodo(item) {

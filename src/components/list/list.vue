@@ -1,7 +1,7 @@
 <template>
   <section class="main">
     <ul class="todo-list">
-      <li v-for="todo in todos" :key="todo">
+      <li v-for="(todo, index) in todos" :key="index + '-' + todo">
         <div class="view">
           <label>{{ todo }}</label>
         </div>

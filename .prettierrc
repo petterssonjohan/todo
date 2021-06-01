@@ -6,6 +6,6 @@
   "useTabs": false,
   "tabWidth": 2,
   "arrowParens": "avoid",
-  "endOfLine": "lf",
+  "endOfLine": "auto",
   "printWidth": 120
 }

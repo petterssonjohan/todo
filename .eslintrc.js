@@ -19,7 +19,13 @@ module.exports = {
     'implicit-arrow-linebreak': 0,
     'import/prefer-default-export': 0,
     'import/no-extraneous-dependencies': 0,
-    'linebreak-style': 0
+    'linebreak-style': 0,
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
   parserOptions: {
     parser: 'babel-eslint'

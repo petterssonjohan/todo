@@ -1,19 +1,27 @@
 <template>
   <div id="app">
     <section class="todoapp">
-      <Header />
+      <Header @add="addTodo" />
+      <List :todos="todos" />
     </section>
   </div>
 </template>
 <script>
 import Header from '../header/header.vue';
+import List from '../list/list.vue';
 
 export default {
+  data: () => ({
+    todos: []
+  }),
   components: {
-    Header
+    Header,
+    List
   },
-  mounted() {
-    console.log('Hej!');
+  methods: {
+    addTodo(item) {
+      this.todos.push(item);
+    }
   }
 };
 </script>

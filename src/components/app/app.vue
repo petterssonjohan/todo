@@ -13,11 +13,13 @@
 import 'cxlt-vue2-toastr/dist/css/cxlt-vue2-toastr.css';
 import Header from '../header/header.vue';
 import List from '../list/list.vue';
+import toastMixin from '../../mixins/toastMixin';
 
 export default {
   components: {
     Header,
     List
-  }
+  },
+  mixins: [toastMixin]
 };
 </script>

@@ -3,22 +3,21 @@
 export default {
   data() {
     return {
-      name: ''
+      todo: ''
     };
   },
   methods: {
     addTodo() {
-      this.$emit('add', this.name);
-      this.name = '';
+      /* $store är tillgänglig här pågrund av att vi satt upp detta i main.js */
+      this.$store.dispatch('onCreate', this.todo);
+      this.todo = '';
     }
   }
 };
-/* Vi behöver få till ett event på exempelvis 'Enter' efter att man skrivit något i "input class="'new-todo'" . /*
-/* Sedan köra $emit mot förälderns event 'add' och där vi skickar den text man fyllt i som parameter */
 </script>
 <template>
   <header class="header">
     <h1>Att göra!</h1>
-    <input class="new-todo" placeholder="What needs to be done?" v-model="name" v-on:keyup.enter="addTodo()" />
+    <input class="new-todo" placeholder="What needs to be done?" v-model="todo" v-on:keyup.enter="addTodo()" />
   </header>
 </template>

@@ -11,7 +11,6 @@
 </template>
 <script>
 export default {
-  props: ['todos'],
   /* Computed Properties kan reagera på ändringar i flertalet egenskaper.
   Exempevis om du har för och efternamn i en komponent.
   Du skulle kunna ha en Computed Property som sammanforgar dessa två egenskaper  */
